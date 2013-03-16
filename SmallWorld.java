@@ -47,10 +47,10 @@ public class SmallWorld {
     // Example writable type
     public static class Node implements Writable {
 
-        public int id; //id for the node
+        public long id; //id for the node
         public int color = 0;  //node color
-        public int parent = Integer.MAX_VALUE;
-        public int distance = Integer.MAX_VALUE;
+        public long parent = Integer.MAX_VALUE;
+        public long distance = Integer.MAX_VALUE;
         public long[] edges; //example array of longs
 
         public Node(int nodeId) {
@@ -61,11 +61,11 @@ public class SmallWorld {
             // does nothing
         }
 
-        public int getId() {
+        public long getId() {
             return this.id;
         }
 
-        public int getParent() {
+        public long getParent() {
             return this.parent;
         }
 
@@ -73,7 +73,7 @@ public class SmallWorld {
             this.parent = parent;
         }
 
-        public int getDistance() {
+        public long getDistance() {
             return this.distance;
         }
 
@@ -95,12 +95,12 @@ public class SmallWorld {
 
         // Serializes object - needed for Writable
         public void write(DataOutput out) throws IOException {
-            out.writeInt(id);
+            out.writeLong(id);
 
             // Example of serializing an array:
             
             // It's a good idea to store the length explicitly
-            int length = 0;
+            long length = 0;
 
             if (edges != null){
                 length = edges.length;
@@ -108,38 +108,47 @@ public class SmallWorld {
 
             // always write the length, since we need to know
             // even when it's zero
-            out.writeInt(length);
+            out.writeLong(length);
 
             // now write each long in the array
             for (int i = 0; i < length; i++){
                 out.writeLong(edges[i]);
             }
 
-            out.writeInt(distance); //save distance
+            out.writeLong(distance); //save distance
             out.writeInt(color); //save color
         }
 
         // Deserializes object - needed for Writable
         public void readFields(DataInput in) throws IOException {
             // example reading an int from the serialized object
-            nodeId = in.readInt();
+            this.id = in.readLong();
 
             // example reading length from the serialized object
-            int length = in.readInt();
+            long length = in.readLong();
 
             // Example of rebuilding the array from the serialized object
-            edges = new long[length];
+            this.edges = new long[length];
             
             for(int i = 0; i < length; i++){
                 edges[i] = in.readLong();
             }
 
+            this.distance = in.readLong();
+            this.color = in.readInt()
         }
 
         public String toString() {
             // We highly recommend implementing this for easy testing and
             // debugging. This version just returns an empty string.
-            return new String();
+            StringBuffer sb = new StringBuffer();
+            sb.append("Node id is " + this.id + " color is " + this.color
+                + "distance is " + this.distance + "parent is " + this.parent + "edges is ");
+            for (long edge : edges) {
+                sb.append(edge + ", ");
+            }
+            sb.append("\n");
+            return sb.toString();
         }
 
     }
