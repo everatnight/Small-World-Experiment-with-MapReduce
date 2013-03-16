@@ -52,8 +52,9 @@ public class SmallWorld {
         public long parent = Integer.MAX_VALUE;
         public long distance = Integer.MAX_VALUE;
         public long[] edges; //example array of longs
+        public boolean isStart = false;
 
-        public Node(int nodeId) {
+        public Node(long nodeId) {
             this.id = nodeId;
         }
 
@@ -91,6 +92,14 @@ public class SmallWorld {
 
         public void setEdges(long[] vertices) {
             this.edges = vertices;
+        }
+
+        public void setStart(boolean start) {
+            this.isStart = start;
+        }
+
+        public boolean isStart() {
+            return this.isStart;
         }
 
         // Serializes object - needed for Writable
@@ -165,8 +174,6 @@ public class SmallWorld {
 
             // example of getting value passed from main
             int inputValue = Integer.parseInt(context.getConfiguration().get("inputValue"));
-
-
             context.write(key, value);
         }
     }
@@ -178,9 +185,16 @@ public class SmallWorld {
      * and using the denom field.  
      */
     public static class LoaderReduce extends Reducer<LongWritable, LongWritable, 
-        LongWritable, LongWritable> {
+        LongWritable, Node> {
 
         public long denom;
+
+        public boolean isStart(denom) {
+            if (Math.random() < (1 / denom)) {
+                return true;
+            }
+            return false;
+        }
 
         public void reduce(LongWritable key, Iterable<LongWritable> values, 
             Context context) throws IOException, InterruptedException {
@@ -189,20 +203,81 @@ public class SmallWorld {
 
             // You can print it out by uncommenting the following line:
             // System.out.println(denom);
-            // Example of iterating through an Iterable
-            ArrayList<Integer> nodes = new ArrayList<Integer>();
-            for (LongWritable value : values) {
-                nodes.add(value);
-                context.write(key, nodes);
-            }
-        }
 
+            //the edges ArrayList.
+            ArrayList<Long> edges = new ArrayList<Long>();
+            Node node = new Node(key.get());
+
+            for (LongWritable value : values) {
+                edges.add(value.get());
+            }
+            node.setEdges((edges.toArray(new long[edges.size()])); //todo test if need cast
+            
+            //choose start 
+            if (isStart(denom)) {
+                node.setColor(1);
+                node.setDistance(0);
+                node.setStart(true);
+            }
+            context.write(key, node);
+        }
     }
 
+    /* The first mapper. Part of the graph loading process, currently just an 
+     * identity function. Modify as you wish. */
+    public static class SearchMap extends Mapper<LongWritable, Node, 
+        LongWritable, Node> {
 
-    // ------- Add your additional Mappers and Reducers Here ------- //
+        @Override
+        public void map(LongWritable key, Node value, Context context)
+                throws IOException, InterruptedException {
+            Node node = value.get();
 
+            if (node.getColor() == 1) {
+                for (long v : node.getEdges()) {
+                    Node vnode = new Node(v);
+                    vnode.setDistance(node.getDistance() + 1);
+                    vnode.setColor(1);
+                    context.write(new LongWritable(vnode.getId()), vnode);
+                }
+                node.setColor(2);
+            }
+            context.write(key, value);
+        }
+    }
 
+    /* The first reducer. This is also currently an identity function (although it
+     * does break the input Iterable back into individual values). Modify it
+     * as you wish. In this reducer, you'll also find an example of loading
+     * and using the denom field.  
+     */
+    public static class SearchReduce extends Reducer<LongWritable, Node, 
+        LongWritable, Node> {
+
+        public void reduce(LongWritable key, Iterable<LongWritable> values, 
+            Context context) throws IOException, InterruptedException {
+            long edges[];
+            long distance = Long.MAX_VALUE;
+            int color = 0;
+
+            for (Node u : values) {
+                if (u.getEdges().size() > 0) {
+                    edges = u.getEdges();
+                }
+                if (u.getDistance() < distance) {
+                    distance = u.getDistance();
+                }
+                if (u.getColor() > color) {
+                    color = u.getColor();
+                }
+            }
+            Node n = new Node(key.get());
+            n.setDistance(distance);
+            n.setEdges(edges);
+            n.setColor(color);
+            context.write(key, node);
+        }
+    }
 
 
 
