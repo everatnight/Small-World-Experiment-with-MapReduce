@@ -123,10 +123,12 @@ public class SmallWorld {
         public void setStarter(long id) {
             this.starter = id;
         }
-        public void setMap(HashMap maps) {
+        public void setMap(HashMap<Long,long[]> maps) {
             this.map = maps;
         }
-
+        public HashMap<Long, long[]> getMap() {
+            return this.map;
+        }
 
 
         // Serializes object - needed for Writable
@@ -321,18 +323,39 @@ public class SmallWorld {
         }
     }
 
+     /* The first mapper. Part of the graph loading process, currently just an 
+     * identity function. Modify as you wish. */
+    public static class HistoMap extends Mapper<LongWritable, Node, 
+        LongWritable, LongWritable> {
 
+        @Override
+        public void map(LongWritable key, Node value, Context context)
+                throws IOException, InterruptedException {
+            Node node = value.get();
+            HashMap<Long, long[]> map = node.getMap();
+            for (Map.Entry entry : map.entrySet()) {
+                context.write(entry.getValue()[1], 1);
+            }
+        }
+    }
 
+      /* The first reducer. This is also currently an identity function (although it
+     * does break the input Iterable back into individual values). Modify it
+     * as you wish. In this reducer, you'll also find an example of loading
+     * and using the denom field.  
+     */
+    public static class HistoReduce extends Reducer<LongWritable, LongWritable, 
+        LongWritable, LongWritable> {
 
-
-
-
-
-
-
-
-
-
+        public void reduce(LongWritable key, Iterable<LongWritable> values, 
+            Context context) throws IOException, InterruptedException {
+            long sum = 0;
+            for (LongWritable value : values) {
+                sum += value;
+            }
+            context.write(key, sum);
+        }
+    }
 
     public static void main(String[] rawArgs) throws Exception {
         GenericOptionsParser parser = new GenericOptionsParser(rawArgs);
