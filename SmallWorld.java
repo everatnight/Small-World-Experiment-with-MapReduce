@@ -75,11 +75,11 @@ public class SmallWorld {
         }
 
         public long getDistance(long id) {
-            return map.get(id)[1];
+            return map.get(new Long(id))[1];
         }
 
         public void setDistance(long id, long distance) {
-            if (map.contains(id)) {
+            if (map.containsKey(id)) {
                 map.get(id)[1] = distance;
             } else {
                 long[] tmp = {0, distance};
@@ -87,12 +87,12 @@ public class SmallWorld {
             }
         }
 
-        public int getColor(long id) {
+        public long getColor(long id) {
             return map.get(id)[0];
         }
 
         public void setColor(long id, long color) {
-            if (map.contains(id)) {
+            if (map.containsKey(id)) {
                 map.get(id)[0] = color;
             } else {
                 long[] tmp = {color, -1};
@@ -138,7 +138,7 @@ public class SmallWorld {
             // Example of serializing an array:
             
             // It's a good idea to store the length explicitly
-            long length = 0;
+            int length = 0;
 
             if (edges != null){
                 length = edges.length;
@@ -153,8 +153,14 @@ public class SmallWorld {
                 out.writeLong(edges[i]);
             }
 
-            out.writeLong(distance); //save distance
-            out.writeInt(color); //save color
+            long keylength = 0;
+            keylength = map.keySet().size();
+            out.writeLong(keylength);
+            for (Map.Entry entry : map.entrySet()) {
+                out.writeLong((long)entry.getKey());
+                out.writeLong(entry.getValue()[0]);
+                out.writeLong(entry.getValue()[1]);
+            }
         }
 
         // Deserializes object - needed for Writable
@@ -163,7 +169,7 @@ public class SmallWorld {
             this.id = in.readLong();
 
             // example reading length from the serialized object
-            long length = in.readLong();
+            int length = in.readLong();
 
             // Example of rebuilding the array from the serialized object
             this.edges = new long[length];
@@ -172,21 +178,18 @@ public class SmallWorld {
                 edges[i] = in.readLong();
             }
 
-            this.distance = in.readLong();
-            this.color = in.readInt()
+            long keylength = in.readLong();
+            for (int i = 0; i < keylength; i++) {
+                long key = out.readLong();
+                long[] tmp = {out.readLong(), out.readLong()};
+                this.map.put(key, tmp);
+            }
         }
 
         public String toString() {
             // We highly recommend implementing this for easy testing and
             // debugging. This version just returns an empty string.
-            StringBuffer sb = new StringBuffer();
-            sb.append("Node id is " + this.id + " color is " + this.color
-                + "distance is " + this.distance + "parent is " + this.parent + "edges is ");
-            for (long edge : edges) {
-                sb.append(edge + ", ");
-            }
-            sb.append("\n");
-            return sb.toString();
+            return new String();
         }
 
     }
@@ -218,14 +221,14 @@ public class SmallWorld {
 
         public long denom;
 
-        public boolean isStart(denom) {
+        public boolean isStart(long denom) {
             if (Math.random() < (1 / denom)) {
                 return true;
             }
             return false;
         }
 
-        public void reduce(LongWritable key, Iterable<LongWritable> values, 
+        public void reduce(LongWritable key, Iterable<Node> values, 
             Context context) throws IOException, InterruptedException {
             // We can grab the denom field from context: 
             denom = Long.parseLong(context.getConfiguration().get("denom"));
@@ -240,13 +243,14 @@ public class SmallWorld {
             for (LongWritable value : values) {
                 edges.add(value.get());
             }
-            node.setEdges((edges.toArray(new long[edges.size()])); //todo test if need cast
+            Long[] tmp = new Long[edges.size()];
+            node.setEdges(edges.toArray(tmp)); //todo test if need cast
             
             //choose start 
             if (isStart(denom)) {
-                node.setStarter(key);
-                node.setColor(key, 1);
-                node.setDistance(key, 0);
+                node.setStarter(key.get());
+                node.setColor(key.get(), 1);
+                node.setDistance(key.get(), 0);s
                 node.setStart(true);
             }
             context.write(key, node);
@@ -285,7 +289,7 @@ public class SmallWorld {
     public static class SearchReduce extends Reducer<LongWritable, Node, 
         LongWritable, Node> {
 
-        public void reduce(LongWritable key, Iterable<LongWritable> values, 
+        public void reduce(LongWritable key, Iterable<Node> values, 
             Context context) throws IOException, InterruptedException {
             long edges[];
             HashMap<Long, long[]> map = new HashMap<Long, long[]>();
