@@ -48,11 +48,11 @@ public class SmallWorld {
     public static class Node implements Writable {
 
         public long id; //id for the node
-        public int color = 0;  //node color
-        public long parent = Integer.MAX_VALUE;
-        public long distance = Integer.MAX_VALUE;
+        public long parent = -1;
         public long[] edges; //example array of longs
         public boolean isStart = false;
+        public long starter = 0;
+        public HashMap<Long, long[]> map = new HashMap<Long, long[]>();
 
         public Node(long nodeId) {
             this.id = nodeId;
@@ -74,16 +74,30 @@ public class SmallWorld {
             this.parent = parent;
         }
 
-        public long getDistance() {
-            return this.distance;
+        public long getDistance(long id) {
+            return map.get(id)[1];
         }
 
-        public int getColor() {
-            return this.color;
+        public void setDistance(long id, long distance) {
+            if (map.contains(id)) {
+                map.get(id)[1] = distance;
+            } else {
+                long[] tmp = {0, distance};
+                map.put(id, tmp);
+            }
         }
 
-        public void setColor(int color) {
-            this.color = color;
+        public int getColor(long id) {
+            return map.get(id)[0];
+        }
+
+        public void setColor(long id, long color) {
+            if (map.contains(id)) {
+                map.get(id)[0] = color;
+            } else {
+                long[] tmp = {color, -1};
+                map.put(id, tmp);
+            }
         }
 
         public long[] getEdges() {
@@ -101,6 +115,19 @@ public class SmallWorld {
         public boolean isStart() {
             return this.isStart;
         }
+
+        public long getStarter() {
+            return this.starter;
+        }
+
+        public void setStarter(long id) {
+            this.starter = id;
+        }
+        public void setMap(HashMap maps) {
+            this.map = maps;
+        }
+
+
 
         // Serializes object - needed for Writable
         public void write(DataOutput out) throws IOException {
@@ -215,8 +242,9 @@ public class SmallWorld {
             
             //choose start 
             if (isStart(denom)) {
-                node.setColor(1);
-                node.setDistance(0);
+                node.setStarter(key);
+                node.setColor(key, 1);
+                node.setDistance(key, 0);
                 node.setStart(true);
             }
             context.write(key, node);
@@ -233,14 +261,15 @@ public class SmallWorld {
                 throws IOException, InterruptedException {
             Node node = value.get();
 
-            if (node.getColor() == 1) {
+            if (node.getColor(key) == 1) {
                 for (long v : node.getEdges()) {
                     Node vnode = new Node(v);
-                    vnode.setDistance(node.getDistance() + 1);
-                    vnode.setColor(1);
+                    vnode.setStarter(node.getStarter());
+                    vnode.setDistance(node.getStarter(), node.getDistance() + 1);
+                    vnode.setColor(node.getStarter(), 1);
                     context.write(new LongWritable(vnode.getId()), vnode);
                 }
-                node.setColor(2);
+                node.setColor(node.getStarter(), 2);
             }
             context.write(key, value);
         }
@@ -257,6 +286,7 @@ public class SmallWorld {
         public void reduce(LongWritable key, Iterable<LongWritable> values, 
             Context context) throws IOException, InterruptedException {
             long edges[];
+            HashMap<Long, long[]> map = new HashMap<Long, long[]>();
             long distance = Long.MAX_VALUE;
             int color = 0;
 
@@ -264,17 +294,29 @@ public class SmallWorld {
                 if (u.getEdges().size() > 0) {
                     edges = u.getEdges();
                 }
-                if (u.getDistance() < distance) {
-                    distance = u.getDistance();
+                //find the minimum distance
+                if (u.getDistance(u.getStarter()) < distance) {
+                    if (map.contains(u.getStarter())) {
+                        map.get(u.getStarter())[1] = distance;
+                    } else {
+                        long[] tmp = {-1, distance};
+                        map.put(u.getStarter(), tmp);
+                    }
                 }
-                if (u.getColor() > color) {
-                    color = u.getColor();
+                //find the darkest color
+                if (u.getColor(u.getStarter()) > color) {
+                    if (map.contains(u.getStarter())) {
+                        map.get(u.getStarter())[0] = color;
+                    } else {
+                        long[] tmp = {color, -1};
+                        map.put(u.getStarter(), tmp);
+                    }
                 }
             }
+
             Node n = new Node(key.get());
-            n.setDistance(distance);
             n.setEdges(edges);
-            n.setColor(color);
+            n.setMap(map);
             context.write(key, node);
         }
     }
