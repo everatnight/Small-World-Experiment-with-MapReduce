@@ -129,6 +129,9 @@ public class SmallWorld {
         public HashMap<Long, long[]> getMap() {
             return this.map;
         }
+    public Node get() {
+	    return this;
+	}
 
 
         // Serializes object - needed for Writable
@@ -156,7 +159,7 @@ public class SmallWorld {
             long keylength = 0;
             keylength = map.keySet().size();
             out.writeLong(keylength);
-            for (Map.Entry entry : map.entrySet()) {
+            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
                 out.writeLong((long)entry.getKey());
                 out.writeLong(entry.getValue()[0]);
                 out.writeLong(entry.getValue()[1]);
@@ -169,7 +172,7 @@ public class SmallWorld {
             this.id = in.readLong();
 
             // example reading length from the serialized object
-            int length = in.readLong();
+            int length = in.readInt();
 
             // Example of rebuilding the array from the serialized object
             this.edges = new long[length];
@@ -180,8 +183,8 @@ public class SmallWorld {
 
             long keylength = in.readLong();
             for (int i = 0; i < keylength; i++) {
-                long key = out.readLong();
-                long[] tmp = {out.readLong(), out.readLong()};
+                long key = in.readLong();
+                long[] tmp = {in.readLong(), in.readLong()};
                 this.map.put(key, tmp);
             }
         }
@@ -240,7 +243,7 @@ public class SmallWorld {
             ArrayList<Long> edges = new ArrayList<Long>();
             Node node = new Node(key.get());
 
-            for (LongWritable value : values) {
+            for (Node value : values) {
                 edges.add(value.get());
             }
             Long[] tmp = new Long[edges.size()];
@@ -250,7 +253,7 @@ public class SmallWorld {
             if (isStart(denom)) {
                 node.setStarter(key.get());
                 node.setColor(key.get(), 1);
-                node.setDistance(key.get(), 0);s
+                node.setDistance(key.get(), 0);
                 node.setStart(true);
             }
             context.write(key, node);
@@ -267,11 +270,11 @@ public class SmallWorld {
                 throws IOException, InterruptedException {
             Node node = value.get();
 
-            if (node.getColor(key) == 1) {
+            if (node.getColor(key.get()) == 1) {
                 for (long v : node.getEdges()) {
                     Node vnode = new Node(v);
                     vnode.setStarter(node.getStarter());
-                    vnode.setDistance(node.getStarter(), node.getDistance() + 1);
+                    vnode.setDistance(node.getStarter(), node.getDistance(node.getStarter()) + 1);
                     vnode.setColor(node.getStarter(), 1);
                     context.write(new LongWritable(vnode.getId()), vnode);
                 }
@@ -297,12 +300,12 @@ public class SmallWorld {
             int color = 0;
 
             for (Node u : values) {
-                if (u.getEdges().size() > 0) {
+                if (u.getEdges().length > 0) {
                     edges = u.getEdges();
                 }
                 //find the minimum distance
                 if (u.getDistance(u.getStarter()) < distance) {
-                    if (map.contains(u.getStarter())) {
+                    if (map.containsKey(u.getStarter())) {
                         map.get(u.getStarter())[1] = distance;
                     } else {
                         long[] tmp = {-1, distance};
@@ -311,7 +314,7 @@ public class SmallWorld {
                 }
                 //find the darkest color
                 if (u.getColor(u.getStarter()) > color) {
-                    if (map.contains(u.getStarter())) {
+                    if (map.containsKey(u.getStarter())) {
                         map.get(u.getStarter())[0] = color;
                     } else {
                         long[] tmp = {color, -1};
@@ -320,9 +323,9 @@ public class SmallWorld {
                 }
             }
 
-            Node n = new Node(key.get());
-            n.setEdges(edges);
-            n.setMap(map);
+            Node node = new Node(key.get());
+            node.setEdges(edges);
+            node.setMap(map);
             context.write(key, node);
         }
     }
@@ -337,8 +340,8 @@ public class SmallWorld {
                 throws IOException, InterruptedException {
             Node node = value.get();
             HashMap<Long, long[]> map = node.getMap();
-            for (Map.Entry entry : map.entrySet()) {
-                context.write(entry.getValue()[1], 1);
+            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
+                context.write(new LongWritable(entry.getValue()[1]), new LongWritable(1L));
             }
         }
     }
@@ -355,9 +358,9 @@ public class SmallWorld {
             Context context) throws IOException, InterruptedException {
             long sum = 0;
             for (LongWritable value : values) {
-                sum += value;
+                sum += value.get();
             }
-            context.write(key, sum);
+            context.write(new LongWritable(key), new LongWritable(sum));
         }
     }
 
