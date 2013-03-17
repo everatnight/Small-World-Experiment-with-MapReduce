@@ -52,10 +52,11 @@ public class SmallWorld {
         public long[] edges; //example array of longs
         public boolean isStart = false;
         public long starter = 0;
-        public HashMap<Long, long[]> map = new HashMap<Long, long[]>();
+        public HashMap<Long, long[]> map;
 
         public Node(long nodeId) {
             this.id = nodeId;
+            map = new HashMap<Long, long[]>();
         }
 
         public Node() {
@@ -129,9 +130,9 @@ public class SmallWorld {
         public HashMap<Long, long[]> getMap() {
             return this.map;
         }
-    public Node get() {
-	    return this;
-	}
+        public Node get() {
+            return this;
+        }
 
 
         // Serializes object - needed for Writable
@@ -147,10 +148,12 @@ public class SmallWorld {
                 length = edges.length;
             }
 
+           
             // always write the length, since we need to know
             // even when it's zero
-            out.writeLong(length);
-
+            out.writeInt(length);
+            out.writeBoolean(this.isStart);
+            out.writeLong(this.starter);
             // now write each long in the array
             for (int i = 0; i < length; i++){
                 out.writeLong(edges[i]);
@@ -173,7 +176,8 @@ public class SmallWorld {
 
             // example reading length from the serialized object
             int length = in.readInt();
-
+            this.isStart = in.readBoolean();
+            this.starter = in.readLong();
             // Example of rebuilding the array from the serialized object
             this.edges = new long[length];
             
@@ -184,7 +188,9 @@ public class SmallWorld {
             long keylength = in.readLong();
             for (int i = 0; i < keylength; i++) {
                 long key = in.readLong();
-                long[] tmp = {in.readLong(), in.readLong()};
+                long color = in.readLong();
+                long distance = in.readLong();
+                long[] tmp = {color, distance};
                 this.map.put(key, tmp);
             }
         }
@@ -192,7 +198,21 @@ public class SmallWorld {
         public String toString() {
             // We highly recommend implementing this for easy testing and
             // debugging. This version just returns an empty string.
-            return new String();
+            StringBuffer sb = new StringBuffer();
+            sb.append("the node id is: \t" + this.id + "\nthe node isStart is:\t" + this.isStart
+                + "\nthe node starter is:\t" + this.starter + "\nthe edges is:\t");
+            if (edges != null) {
+                for (long edge : this.edges) {
+                    sb.append(edge + ", ");
+                }
+            }
+            sb.append("\nthe map is:\t");
+            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
+                sb.append("\nstarter:\t" + entry.getKey());
+                sb.append("\ncolor:\t" + entry.getValue()[0]);
+                sb.append("\ndistance:\t" + entry.getValue()[1]);
+            }
+            return sb.toString();
         }
 
     }
@@ -225,13 +245,13 @@ public class SmallWorld {
         public long denom;
 
         public boolean isStart(long denom) {
-            if (Math.random() < (1 / denom)) {
+            if (Math.random() < (1.0 / denom)) {
                 return true;
             }
             return false;
         }
 
-        public void reduce(LongWritable key, Iterable<Node> values, 
+        public void reduce(LongWritable key, Iterable<LongWritable> values, 
             Context context) throws IOException, InterruptedException {
             // We can grab the denom field from context: 
             denom = Long.parseLong(context.getConfiguration().get("denom"));
@@ -242,20 +262,30 @@ public class SmallWorld {
             //the edges ArrayList.
             ArrayList<Long> edges = new ArrayList<Long>();
             Node node = new Node(key.get());
-
-            for (Node value : values) {
+            
+            int i = 0;
+            for (LongWritable value : values) {
                 edges.add(value.get());
             }
-            Long[] tmp = new Long[edges.size()];
-            node.setEdges(edges.toArray(tmp)); //todo test if need cast
-            
+
+            long[] arrayEdges = new long[edges.size()];
+
+            for (Long edge : edges) {
+                arrayEdges[i] = (long) edge;
+                i++;
+            }
+
             //choose start 
             if (isStart(denom)) {
                 node.setStarter(key.get());
+                node.setEdges(arrayEdges);
                 node.setColor(key.get(), 1);
                 node.setDistance(key.get(), 0);
                 node.setStart(true);
             }
+            System.out.println("============LoaderReduce================");
+            System.out.println(node.toString());
+            System.out.println("============================");
             context.write(key, node);
         }
     }
@@ -269,17 +299,25 @@ public class SmallWorld {
         public void map(LongWritable key, Node value, Context context)
                 throws IOException, InterruptedException {
             Node node = value.get();
-
-            if (node.getColor(key.get()) == 1) {
-                for (long v : node.getEdges()) {
-                    Node vnode = new Node(v);
-                    vnode.setStarter(node.getStarter());
-                    vnode.setDistance(node.getStarter(), node.getDistance(node.getStarter()) + 1);
-                    vnode.setColor(node.getStarter(), 1);
-                    context.write(new LongWritable(vnode.getId()), vnode);
+            System.out.println("========search map beginning============:\n" + node.toString());
+            System.out.println("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+            for (long startkey : node.getMap().keySet()) {
+                if (node.getColor(startkey) == 1) {
+                    if (node.getEdges() != null) {
+                        for (long v : node.getEdges()) {
+                            Node vnode = new Node(v);
+                            System.out.println("======v==========\nthe v is:\t" + v + "\n");
+                            vnode.setStarter(startkey);
+                            vnode.setDistance(startkey, node.getDistance(startkey) + 1);
+                            vnode.setColor(startkey, 1);
+                            System.out.println("=========vnode==========\n" + vnode.toString());
+                            context.write(new LongWritable(vnode.getId()), vnode);
+                        }
+                    }
+                    node.setColor(startkey, 2);
                 }
-                node.setColor(node.getStarter(), 2);
             }
+            
             context.write(key, value);
         }
     }
@@ -294,12 +332,13 @@ public class SmallWorld {
 
         public void reduce(LongWritable key, Iterable<Node> values, 
             Context context) throws IOException, InterruptedException {
-            long edges[];
+            long edges[] = null;
             HashMap<Long, long[]> map = new HashMap<Long, long[]>();
             long distance = Long.MAX_VALUE;
             int color = 0;
 
             for (Node u : values) {
+                System.out.println("=======In Reduce=======\n" + u.toString());
                 if (u.getEdges().length > 0) {
                     edges = u.getEdges();
                 }
@@ -308,19 +347,26 @@ public class SmallWorld {
                     if (map.containsKey(u.getStarter())) {
                         map.get(u.getStarter())[1] = distance;
                     } else {
-                        long[] tmp = {-1, distance};
+                        long[] tmp = {-1, u.getDistance(u.getStarter())};
                         map.put(u.getStarter(), tmp);
                     }
                 }
                 //find the darkest color
                 if (u.getColor(u.getStarter()) > color) {
                     if (map.containsKey(u.getStarter())) {
-                        map.get(u.getStarter())[0] = color;
+                        map.get(u.getStarter())[0] = u.getColor(u.getStarter());
                     } else {
-                        long[] tmp = {color, -1};
+                        long[] tmp = {u.getColor(u.getStarter()), -1};
                         map.put(u.getStarter(), tmp);
                     }
                 }
+            }
+            System.out.println("============Reduce result=======\n"
+                + "the node " + key.get() + ":\n");
+            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
+                System.out.println("\tstarter:" + entry.getKey() + "\n");
+                System.out.println("\tcolor:" + entry.getValue()[0] + "\n");
+                System.out.println("\tdistance:" + entry.getValue()[1] + "\n");
             }
 
             Node node = new Node(key.get());
@@ -360,7 +406,7 @@ public class SmallWorld {
             for (LongWritable value : values) {
                 sum += value.get();
             }
-            context.write(new LongWritable(key), new LongWritable(sum));
+            context.write(new LongWritable(key.get()), new LongWritable(sum));
         }
     }
 
@@ -385,7 +431,7 @@ public class SmallWorld {
         job.setMapOutputKeyClass(LongWritable.class);
         job.setMapOutputValueClass(LongWritable.class);
         job.setOutputKeyClass(LongWritable.class);
-        job.setOutputValueClass(LongWritable.class);
+        job.setOutputValueClass(Node.class);
 
         job.setMapperClass(LoaderMap.class);
         job.setReducerClass(LoaderReduce.class);
@@ -408,14 +454,14 @@ public class SmallWorld {
 
             // Feel free to modify these four lines as necessary:
             job.setMapOutputKeyClass(LongWritable.class);
-            job.setMapOutputValueClass(LongWritable.class);
+            job.setMapOutputValueClass(Node.class);
             job.setOutputKeyClass(LongWritable.class);
-            job.setOutputValueClass(LongWritable.class);
+            job.setOutputValueClass(Node.class);
 
             // You'll want to modify the following based on what you call
             // your mapper and reducer classes for the BFS phase.
-            job.setMapperClass(Mapper.class); // currently the default Mapper
-            job.setReducerClass(Reducer.class); // currently the default Reducer
+            job.setMapperClass(SearchMap.class); // currently the default Mapper
+            job.setReducerClass(SearchReduce.class); // currently the default Reducer
 
             job.setInputFormatClass(SequenceFileInputFormat.class);
             job.setOutputFormatClass(SequenceFileOutputFormat.class);
@@ -434,7 +480,7 @@ public class SmallWorld {
 
         // Feel free to modify these two lines as necessary:
         job.setMapOutputKeyClass(LongWritable.class);
-        job.setMapOutputValueClass(LongWritable.class);
+        job.setMapOutputValueClass(Node.class);
 
         // DO NOT MODIFY THE FOLLOWING TWO LINES OF CODE:
         job.setOutputKeyClass(LongWritable.class);
@@ -442,8 +488,8 @@ public class SmallWorld {
 
         // You'll want to modify the following based on what you call your
         // mapper and reducer classes for the Histogram Phase
-        job.setMapperClass(Mapper.class); // currently the default Mapper
-        job.setReducerClass(Reducer.class); // currently the default Reducer
+        job.setMapperClass(HistoMap.class); // currently the default Mapper
+        job.setReducerClass(HistoReduce.class); // currently the default Reducer
 
         job.setInputFormatClass(SequenceFileInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
