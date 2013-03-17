@@ -5,8 +5,8 @@
  * Partner 1 Name:
  * Partner 1 Login:
  *
- * Partner 2 Name:
- * Partner 2 Login:
+ * Partner 2 Name: Cedric Lamy
+ * Partner 2 Login: cs61c-iy
  *
  * REMINDERS: 
  *
@@ -47,23 +47,22 @@ public class SmallWorld {
     // Example writable type
     public static class Node implements Writable {
 
-        public long id; //id for the node
+        public String id; //id for the node
         public long parent = -1;
         public long[] edges; //example array of longs
         public boolean isStart = false;
-        public long starter = 0;
-        public HashMap<Long, long[]> map;
+        public long distance = 0;
+        public long color = 0;
 
-        public Node(long nodeId) {
-            this.id = nodeId;
-            map = new HashMap<Long, long[]>();
+        public Node(String nodeId) {
+            this.id = new String(nodeId);
         }
 
         public Node() {
             // does nothing
         }
 
-        public long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -71,34 +70,24 @@ public class SmallWorld {
             return this.parent;
         }
 
-        public void setParent(int parent) {
-            this.parent = parent;
+        public void setParent(int par) {
+            this.parent = par;
         }
 
-        public long getDistance(long id) {
-            return map.get(new Long(id))[1];
+        public long getDistance() {
+            return this.distance;
         }
 
-        public void setDistance(long id, long distance) {
-            if (map.containsKey(id)) {
-                map.get(id)[1] = distance;
-            } else {
-                long[] tmp = {0, distance};
-                map.put(id, tmp);
-            }
+        public void setDistance(long dist) {
+            this.distance = dist;
         }
 
-        public long getColor(long id) {
-            return map.get(id)[0];
+        public long getColor() {
+            return this.color;
         }
 
-        public void setColor(long id, long color) {
-            if (map.containsKey(id)) {
-                map.get(id)[0] = color;
-            } else {
-                long[] tmp = {color, -1};
-                map.put(id, tmp);
-            }
+        public void setColor(long col) {
+            this.color = col;
         }
 
         public long[] getEdges() {
@@ -116,20 +105,6 @@ public class SmallWorld {
         public boolean isStart() {
             return this.isStart;
         }
-
-        public long getStarter() {
-            return this.starter;
-        }
-
-        public void setStarter(long id) {
-            this.starter = id;
-        }
-        public void setMap(HashMap<Long,long[]> maps) {
-            this.map = maps;
-        }
-        public HashMap<Long, long[]> getMap() {
-            return this.map;
-        }
         public Node get() {
             return this;
         }
@@ -137,7 +112,13 @@ public class SmallWorld {
 
         // Serializes object - needed for Writable
         public void write(DataOutput out) throws IOException {
-            out.writeLong(id);
+
+        int strlength = id.length();
+	    out.writeInt(strlength);
+	    for(int i = 0; i < strlength; i++) {
+		out.writeChar(id.charAt(i));
+	    }
+            //out.writeChars(id+ "\n");
 
             // Example of serializing an array:
             
@@ -152,46 +133,35 @@ public class SmallWorld {
             // always write the length, since we need to know
             // even when it's zero
             out.writeInt(length);
-            out.writeBoolean(this.isStart);
-            out.writeLong(this.starter);
+            out.writeBoolean(this.isStart());
+            out.writeLong(this.getDistance());
+            out.writeLong(this.getColor());
             // now write each long in the array
             for (int i = 0; i < length; i++){
                 out.writeLong(edges[i]);
-            }
-
-            long keylength = 0;
-            keylength = map.keySet().size();
-            out.writeLong(keylength);
-            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
-                out.writeLong((long)entry.getKey());
-                out.writeLong(entry.getValue()[0]);
-                out.writeLong(entry.getValue()[1]);
             }
         }
 
         // Deserializes object - needed for Writable
         public void readFields(DataInput in) throws IOException {
             // example reading an int from the serialized object
-            this.id = in.readLong();
+	    int strlength = in.readInt();
+	    this.id = "";
+	    for(int i = 0; i < strlength; i++) {
+		this.id += in.readChar();
+	    }
+            //this.id = in.readLine();
 
             // example reading length from the serialized object
             int length = in.readInt();
             this.isStart = in.readBoolean();
-            this.starter = in.readLong();
+            this.setDistance(in.readLong());
+            this.setColor(in.readLong());
             // Example of rebuilding the array from the serialized object
             this.edges = new long[length];
             
             for(int i = 0; i < length; i++){
                 edges[i] = in.readLong();
-            }
-
-            long keylength = in.readLong();
-            for (int i = 0; i < keylength; i++) {
-                long key = in.readLong();
-                long color = in.readLong();
-                long distance = in.readLong();
-                long[] tmp = {color, distance};
-                this.map.put(key, tmp);
             }
         }
 
@@ -199,19 +169,14 @@ public class SmallWorld {
             // We highly recommend implementing this for easy testing and
             // debugging. This version just returns an empty string.
             StringBuffer sb = new StringBuffer();
-            sb.append("the node id is: \t" + this.id + "\nthe node isStart is:\t" + this.isStart
-                + "\nthe node starter is:\t" + this.starter + "\nthe edges is:\t");
+            sb.append("the node id is: \t" + this.id + "\nthe node isStart is:\t" + this.isStart + "\nthe edges is:\t");
             if (edges != null) {
                 for (long edge : this.edges) {
                     sb.append(edge + ", ");
                 }
             }
-            sb.append("\nthe map is:\t");
-            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
-                sb.append("\nstarter:\t" + entry.getKey());
-                sb.append("\ncolor:\t" + entry.getValue()[0]);
-                sb.append("\ndistance:\t" + entry.getValue()[1]);
-            }
+            sb.append("\ncolor:\t" + this.color);
+            sb.append("\ndistance:\t" + this.distance);
             return sb.toString();
         }
 
@@ -240,7 +205,7 @@ public class SmallWorld {
      * and using the denom field.  
      */
     public static class LoaderReduce extends Reducer<LongWritable, LongWritable, 
-        LongWritable, Node> {
+        Text, Node> {
 
         public long denom;
 
@@ -260,8 +225,9 @@ public class SmallWorld {
             // System.out.println(denom);
 
             //the edges ArrayList.
+            String alpha = key + "--" + key;
             ArrayList<Long> edges = new ArrayList<Long>();
-            Node node = new Node(key.get());
+            Node node = new Node(alpha);
             
             int i = 0;
             for (LongWritable value : values) {
@@ -277,45 +243,38 @@ public class SmallWorld {
 
             //choose start 
             if (isStart(denom)) {
-                node.setStarter(key.get());
                 node.setEdges(arrayEdges);
-                node.setColor(key.get(), 1);
-                node.setDistance(key.get(), 0);
+                node.setColor(1);
+                node.setDistance(0);
                 node.setStart(true);
             }
-            System.out.println("============LoaderReduce================");
-            System.out.println(node.toString());
-            System.out.println("============================");
-            context.write(key, node);
+	    theUniverse.put(node.getId(), node);
+            context.write(new Text(alpha), node);
         }
     }
 
     /* The first mapper. Part of the graph loading process, currently just an 
      * identity function. Modify as you wish. */
-    public static class SearchMap extends Mapper<LongWritable, Node, 
-        LongWritable, Node> {
+    public static class SearchMap extends Mapper<Text, Node, 
+        Text, Node> {
 
         @Override
-        public void map(LongWritable key, Node value, Context context)
+        public void map(Text key, Node value, Context context)
                 throws IOException, InterruptedException {
             Node node = value.get();
-            System.out.println("========search map beginning============:\n" + node.toString());
-            System.out.println("\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-            for (long startkey : node.getMap().keySet()) {
-                if (node.getColor(startkey) == 1) {
-                    if (node.getEdges() != null) {
-                        for (long v : node.getEdges()) {
-                            Node vnode = new Node(v);
-                            System.out.println("======v==========\nthe v is:\t" + v + "\n");
-                            vnode.setStarter(startkey);
-                            vnode.setDistance(startkey, node.getDistance(startkey) + 1);
-                            vnode.setColor(startkey, 1);
-                            System.out.println("=========vnode==========\n" + vnode.toString());
-                            context.write(new LongWritable(vnode.getId()), vnode);
-                        }
+            String alpha = key.toString();
+            if (node.getColor() == 1) {
+                if (node.getEdges() != null) {
+                    for (long v : node.getEdges()) {
+                        String beta = alpha.split("--")[0];
+                        beta += "--" + v;
+                        Node vnode = new Node(beta);
+                        vnode.setDistance(node.getDistance() + 1);
+                        vnode.setColor(1);
+                        context.write(new Text(vnode.getId()), vnode);
                     }
-                    node.setColor(startkey, 2);
                 }
+                node.setColor(2);
             }
             
             context.write(key, value);
@@ -327,68 +286,46 @@ public class SmallWorld {
      * as you wish. In this reducer, you'll also find an example of loading
      * and using the denom field.  
      */
-    public static class SearchReduce extends Reducer<LongWritable, Node, 
-        LongWritable, Node> {
+    public static class SearchReduce extends Reducer<Text, Node, 
+        Text, Node> {
 
-        public void reduce(LongWritable key, Iterable<Node> values, 
+        public void reduce(Text key, Iterable<Node> values, 
             Context context) throws IOException, InterruptedException {
             long edges[] = null;
-            HashMap<Long, long[]> map = new HashMap<Long, long[]>();
             long distance = Long.MAX_VALUE;
-            int color = 0;
+            long color = 0;
 
             for (Node u : values) {
-                System.out.println("=======In Reduce=======\n" + u.toString());
-                if (u.getEdges().length > 0) {
-                    edges = u.getEdges();
-                }
                 //find the minimum distance
-                if (u.getDistance(u.getStarter()) < distance) {
-                    if (map.containsKey(u.getStarter())) {
-                        map.get(u.getStarter())[1] = distance;
-                    } else {
-                        long[] tmp = {-1, u.getDistance(u.getStarter())};
-                        map.put(u.getStarter(), tmp);
-                    }
-                }
+                if (u.getDistance() < distance) {
+                    distance = u.getDistance();
+		}
                 //find the darkest color
-                if (u.getColor(u.getStarter()) > color) {
-                    if (map.containsKey(u.getStarter())) {
-                        map.get(u.getStarter())[0] = u.getColor(u.getStarter());
-                    } else {
-                        long[] tmp = {u.getColor(u.getStarter()), -1};
-                        map.put(u.getStarter(), tmp);
-                    }
+		if (u.getColor() > color) {
+                    color = u.getColor();
                 }
             }
-            System.out.println("============Reduce result=======\n"
-                + "the node " + key.get() + ":\n");
-            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
-                System.out.println("\tstarter:" + entry.getKey() + "\n");
-                System.out.println("\tcolor:" + entry.getValue()[0] + "\n");
-                System.out.println("\tdistance:" + entry.getValue()[1] + "\n");
-            }
+	    String brandon = key.toString().split("--")[1];
+	    edges = theUniverse.get(brandon + "--" + brandon).getEdges();
 
-            Node node = new Node(key.get());
+            Node node = new Node(key.toString());
             node.setEdges(edges);
-            node.setMap(map);
+	    node.setColor(color);
+	    node.setDistance(distance);
             context.write(key, node);
         }
     }
 
      /* The first mapper. Part of the graph loading process, currently just an 
      * identity function. Modify as you wish. */
-    public static class HistoMap extends Mapper<LongWritable, Node, 
+    public static class HistoMap extends Mapper<Text, Node, 
         LongWritable, LongWritable> {
 
         @Override
-        public void map(LongWritable key, Node value, Context context)
+        public void map(Text key, Node value, Context context)
                 throws IOException, InterruptedException {
             Node node = value.get();
-            HashMap<Long, long[]> map = node.getMap();
-            for (Map.Entry<Long, long[]> entry : map.entrySet()) {
-                context.write(new LongWritable(entry.getValue()[1]), new LongWritable(1L));
-            }
+            context.write(new LongWritable(node.getDistance()), new LongWritable(1L));
         }
     }
 
@@ -415,6 +352,9 @@ public class SmallWorld {
         Configuration conf = parser.getConfiguration();
         String[] args = parser.getRemainingArgs();
 
+	theUniverse = new HashMap<String, Node>();
+
+
         // Pass in denom command line arg:
         conf.set("denom", args[2]);
 
@@ -430,7 +370,7 @@ public class SmallWorld {
 
         job.setMapOutputKeyClass(LongWritable.class);
         job.setMapOutputValueClass(LongWritable.class);
-        job.setOutputKeyClass(LongWritable.class);
+        job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Node.class);
 
         job.setMapperClass(LoaderMap.class);
@@ -453,9 +393,9 @@ public class SmallWorld {
             job.setJarByClass(SmallWorld.class);
 
             // Feel free to modify these four lines as necessary:
-            job.setMapOutputKeyClass(LongWritable.class);
+            job.setMapOutputKeyClass(Text.class);
             job.setMapOutputValueClass(Node.class);
-            job.setOutputKeyClass(LongWritable.class);
+            job.setOutputKeyClass(Text.class);
             job.setOutputValueClass(Node.class);
 
             // You'll want to modify the following based on what you call
@@ -480,7 +420,7 @@ public class SmallWorld {
 
         // Feel free to modify these two lines as necessary:
         job.setMapOutputKeyClass(LongWritable.class);
-        job.setMapOutputValueClass(Node.class);
+        job.setMapOutputValueClass(LongWritable.class);
 
         // DO NOT MODIFY THE FOLLOWING TWO LINES OF CODE:
         job.setOutputKeyClass(LongWritable.class);
@@ -501,4 +441,5 @@ public class SmallWorld {
 
         job.waitForCompletion(true);
     }
+    static HashMap<String, Node> theUniverse;
 }
