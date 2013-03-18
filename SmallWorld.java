@@ -114,10 +114,10 @@ public class SmallWorld {
         public void write(DataOutput out) throws IOException {
 
         int strlength = id.length();
-	    out.writeInt(strlength);
-	    for(int i = 0; i < strlength; i++) {
-		out.writeChar(id.charAt(i));
-	    }
+        out.writeInt(strlength);
+        for(int i = 0; i < strlength; i++) {
+        out.writeChar(id.charAt(i));
+        }
             //out.writeChars(id+ "\n");
 
             // Example of serializing an array:
@@ -145,11 +145,11 @@ public class SmallWorld {
         // Deserializes object - needed for Writable
         public void readFields(DataInput in) throws IOException {
             // example reading an int from the serialized object
-	    int strlength = in.readInt();
-	    this.id = "";
-	    for(int i = 0; i < strlength; i++) {
-		this.id += in.readChar();
-	    }
+        int strlength = in.readInt();
+        this.id = "";
+        for(int i = 0; i < strlength; i++) {
+        this.id += in.readChar();
+        }
             //this.id = in.readLine();
 
             // example reading length from the serialized object
@@ -248,7 +248,7 @@ public class SmallWorld {
                 node.setDistance(0);
                 node.setStart(true);
             }
-	    theUniverse.put(node.getId(), node);
+        theUniverse.put(node.getId(), node);
             context.write(new Text(alpha), node);
         }
     }
@@ -299,19 +299,19 @@ public class SmallWorld {
                 //find the minimum distance
                 if (u.getDistance() < distance) {
                     distance = u.getDistance();
-		}
+        }
                 //find the darkest color
-		if (u.getColor() > color) {
+        if (u.getColor() > color) {
                     color = u.getColor();
                 }
             }
-	    String brandon = key.toString().split("--")[1];
-	    edges = theUniverse.get(brandon + "--" + brandon).getEdges();
+        String brandon = key.toString().split("--")[1];
+        edges = theUniverse.get(brandon + "--" + brandon).getEdges();
 
             Node node = new Node(key.toString());
             node.setEdges(edges);
-	    node.setColor(color);
-	    node.setDistance(distance);
+        node.setColor(color);
+        node.setDistance(distance);
             context.write(key, node);
         }
     }
@@ -352,7 +352,7 @@ public class SmallWorld {
         Configuration conf = parser.getConfiguration();
         String[] args = parser.getRemainingArgs();
 
-	theUniverse = new HashMap<String, Node>();
+    theUniverse = new HashMap<String, Node>();
 
 
         // Pass in denom command line arg:
