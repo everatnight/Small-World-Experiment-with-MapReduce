@@ -2,8 +2,8 @@
  *
  * CS61C Spring 2013 Project 2: Small World
  *
- * Partner 1 Name:
- * Partner 1 Login:
+ * Partner 1 Name: yijing bai
+ * Partner 1 Login: cs61c-jd
  *
  * Partner 2 Name: Cedric Lamy
  * Partner 2 Login: cs61c-iy
@@ -240,15 +240,14 @@ public class SmallWorld {
                 arrayEdges[i] = (long) edge;
                 i++;
             }
-
+            node.setEdges(arrayEdges);
             //choose start 
             if (isStart(denom)) {
-                node.setEdges(arrayEdges);
                 node.setColor(1);
                 node.setDistance(0);
                 node.setStart(true);
             }
-        theUniverse.put(node.getId(), node);
+            theUniverse.put(node.getId(), node);
             context.write(new Text(alpha), node);
         }
     }
@@ -299,19 +298,19 @@ public class SmallWorld {
                 //find the minimum distance
                 if (u.getDistance() < distance) {
                     distance = u.getDistance();
-        }
+                }
                 //find the darkest color
-        if (u.getColor() > color) {
+                if (u.getColor() > color) {
                     color = u.getColor();
                 }
             }
-        String brandon = key.toString().split("--")[1];
-        edges = theUniverse.get(brandon + "--" + brandon).getEdges();
+            String brandon = key.toString().split("--")[1];
+            edges = theUniverse.get(brandon + "--" + brandon).getEdges();
 
             Node node = new Node(key.toString());
             node.setEdges(edges);
-        node.setColor(color);
-        node.setDistance(distance);
+            node.setColor(color);
+            node.setDistance(distance);
             context.write(key, node);
         }
     }
