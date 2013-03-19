@@ -2,11 +2,11 @@
  *
  * CS61C Spring 2013 Project 2: Small World
  *
- * Partner 1 Name:
- * Partner 1 Login:
+ * Partner 1 Name:yijing bai
+ * Partner 1 Login:cs61c-jd
  *
- * Partner 2 Name:
- * Partner 2 Login:
+ * Partner 2 Name:Cedric Lamy
+ * Partner 2 Login:cs61c-iy
  *
  * REMINDERS: 
  *
