@@ -505,7 +505,7 @@ public class SmallWorld {
 
         // Feel free to modify these two lines as necessary:
         job.setMapOutputKeyClass(LongWritable.class);
-        job.setMapOutputValueClass(Node.class);
+        job.setMapOutputValueClass(LongWritable.class);
 
         // DO NOT MODIFY THE FOLLOWING TWO LINES OF CODE:
         job.setOutputKeyClass(LongWritable.class);
