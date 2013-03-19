@@ -52,11 +52,10 @@ public class SmallWorld {
         public long[] edges; //example array of longs
         public boolean isStart = false;
         public long starter = 0;
-        public HashMap<Long, long[]> map;
+        public HashMap<Long, long[]> map = new HashMap<Long, long[]>();
 
         public Node(long nodeId) {
             this.id = nodeId;
-            map = new HashMap<Long, long[]>();
         }
 
         public Node() {
@@ -89,7 +88,7 @@ public class SmallWorld {
         }
 
         public long getColor(long id) {
-            return map.get(id)[0];
+            return this.map.get(id)[0];
         }
 
         public void setColor(long id, long color) {
@@ -185,14 +184,17 @@ public class SmallWorld {
                 edges[i] = in.readLong();
             }
 
+            HashMap<Long, long[]> newmap = new HashMap<Long, long[]>();
+
             long keylength = in.readLong();
             for (int i = 0; i < keylength; i++) {
                 long key = in.readLong();
                 long color = in.readLong();
                 long distance = in.readLong();
                 long[] tmp = {color, distance};
-                this.map.put(key, tmp);
+                newmap.put(key, tmp);
             }
+            this.map = newmap;
         }
 
         public String toString() {
@@ -276,13 +278,16 @@ public class SmallWorld {
             }
 
             //choose start 
+            node.setEdges(arrayEdges);
             if (isStart(denom)) {
                 node.setStarter(key.get());
-                node.setEdges(arrayEdges);
-                node.setColor(key.get(), 1);
-                node.setDistance(key.get(), 0);
+                HashMap<Long, long[]> map = new HashMap<Long, long[]>();
+                long[] tmp = {1, 0};
+                map.put(key.get(), tmp);
+                node.setMap(map);
                 node.setStart(true);
             }
+
             System.out.println("============LoaderReduce================");
             System.out.println(node.toString());
             System.out.println("============================");
@@ -308,10 +313,12 @@ public class SmallWorld {
                             Node vnode = new Node(v);
                             System.out.println("======v==========\nthe v is:\t" + v + "\n");
                             vnode.setStarter(startkey);
-                            vnode.setDistance(startkey, node.getDistance(startkey) + 1);
-                            vnode.setColor(startkey, 1);
+                            HashMap<Long, long[]> map = new HashMap<Long, long[]>();
+                            long[] tmp = {1, node.getDistance(startkey) + 1};
+                            map.put(startkey, tmp);
+                            vnode.setMap(map);
                             System.out.println("=========vnode==========\n" + vnode.toString());
-                            context.write(new LongWritable(vnode.getId()), vnode);
+                            context.write(new LongWritable(v), vnode);
                         }
                     }
                     node.setColor(startkey, 2);
@@ -330,39 +337,57 @@ public class SmallWorld {
     public static class SearchReduce extends Reducer<LongWritable, Node, 
         LongWritable, Node> {
 
+        public long[] findMinDark(HashSet<long[]> hs) {
+            long[] result = {0L, Long.MAX_VALUE};
+            for (long[] elem : hs) {
+                result[0] = Math.max(elem[0], result[0]);
+                result[1] = Math.min(elem[1], result[1]);
+            }
+            return result;
+        }
+
         public void reduce(LongWritable key, Iterable<Node> values, 
             Context context) throws IOException, InterruptedException {
             long edges[] = null;
             HashMap<Long, long[]> map = new HashMap<Long, long[]>();
-            long distance = Long.MAX_VALUE;
-            int color = 0;
-
+            HashMap<Long, HashSet<long[]>> tmpMap = new HashMap<Long, HashSet<long[]>>();
             for (Node u : values) {
-                System.out.println("=======In Reduce=======\n" + u.toString());
+                System.out.println("=============In Reduce===========\n" + u.toString());
                 if (u.getEdges().length > 0) {
                     edges = u.getEdges();
                 }
-                //find the minimum distance
-                if (u.getDistance(u.getStarter()) < distance) {
-                    if (map.containsKey(u.getStarter())) {
-                        map.get(u.getStarter())[1] = distance;
+                for (Long startKey : u.getMap().keySet()) {
+                    System.out.println("=====start key======\n" + startKey + "\n" + u.getMap().get(startKey) + "\n=============");
+                    if (tmpMap.get(startKey) != null) {
+                        if (u.getMap().size() != 0) {
+                            tmpMap.get(startKey).add(u.getMap().get(startKey));    
+                        }
                     } else {
-                        long[] tmp = {-1, u.getDistance(u.getStarter())};
-                        map.put(u.getStarter(), tmp);
-                    }
-                }
-                //find the darkest color
-                if (u.getColor(u.getStarter()) > color) {
-                    if (map.containsKey(u.getStarter())) {
-                        map.get(u.getStarter())[0] = u.getColor(u.getStarter());
-                    } else {
-                        long[] tmp = {u.getColor(u.getStarter()), -1};
-                        map.put(u.getStarter(), tmp);
+                        HashSet<long[]> tmp = new HashSet<long[]>();
+                        tmp.add(u.getMap().get(startKey));
+                        tmpMap.put(startKey, tmp);
                     }
                 }
             }
+
+            for (Map.Entry<Long, HashSet<long[]>> t : tmpMap.entrySet()) {
+                System.out.println("=====HashSet<long[]>======\n");
+                for (long[] i : t.getValue()) {
+                    for (long z : i) {
+                        System.out.println(z + ", ");
+                    }
+                    System.out.println("\n");
+                }
+                map.put(t.getKey(), findMinDark(t.getValue()));
+            }
+
             System.out.println("============Reduce result=======\n"
                 + "the node " + key.get() + ":\n");
+            System.out.println("edges:\t");
+            for (long e : edges) {
+                System.out.println(e + ", ");;
+            }
+            System.out.println("\n");
             for (Map.Entry<Long, long[]> entry : map.entrySet()) {
                 System.out.println("\tstarter:" + entry.getKey() + "\n");
                 System.out.println("\tcolor:" + entry.getValue()[0] + "\n");

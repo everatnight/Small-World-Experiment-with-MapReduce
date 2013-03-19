@@ -1,0 +1,3038 @@
+hadoop jar sw.jar SmallWorld ~cs61c/proj2data/ring4.seq output-out 1
+============LoaderReduce================
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+============================
+============LoaderReduce================
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+============================
+============LoaderReduce================
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+============================
+============LoaderReduce================
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+============================
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:1
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:1
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:1
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:1
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=======In Reduce=======
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:1
+
+	distance:0
+
+=======In Reduce=======
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+=======In Reduce=======
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+=======In Reduce=======
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+

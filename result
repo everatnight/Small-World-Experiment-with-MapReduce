@@ -1,0 +1,8793 @@
+hadoop jar sw.jar SmallWorld ~cs61c/proj2data/ring4.seq output-out 1
+============LoaderReduce================
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+============================
+============LoaderReduce================
+the node id is: 	1
+the node isStart is:	true
+the node starter is:	1
+the edges is:	2, 
+the map is:	
+starter:	1
+color:	1
+distance:	0
+============================
+============LoaderReduce================
+the node id is: 	2
+the node isStart is:	true
+the node starter is:	2
+the edges is:	3, 
+the map is:	
+starter:	2
+color:	1
+distance:	0
+============================
+============LoaderReduce================
+the node id is: 	3
+the node isStart is:	true
+the node starter is:	3
+the edges is:	0, 
+the map is:	
+starter:	3
+color:	1
+distance:	0
+============================
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	true
+the node starter is:	1
+the edges is:	2, 
+the map is:	
+starter:	1
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	true
+the node starter is:	2
+the edges is:	3, 
+the map is:	
+starter:	2
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	1
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	true
+the node starter is:	3
+the edges is:	0, 
+the map is:	
+starter:	3
+color:	1
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	1
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	true
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+=====start key======
+0
+[J@20b40ec4
+=============
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	1
+=====start key======
+3
+[J@d3576a2
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:1
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	1
+=====start key======
+0
+[J@30ff8c74
+=============
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	true
+the node starter is:	1
+the edges is:	2, 
+the map is:	
+starter:	1
+color:	2
+distance:	0
+=====start key======
+1
+[J@595e2ccd
+=============
+=====HashSet<long[]>======
+
+1, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:1
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	1
+=====start key======
+1
+[J@35cf7491
+=============
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	true
+the node starter is:	2
+the edges is:	3, 
+the map is:	
+starter:	2
+color:	2
+distance:	0
+=====start key======
+2
+[J@46edf730
+=============
+=====HashSet<long[]>======
+
+1, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:1
+
+	color:1
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	1
+=====start key======
+2
+[J@30ff94b1
+=============
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	true
+the node starter is:	3
+the edges is:	0, 
+the map is:	
+starter:	3
+color:	2
+distance:	0
+=====start key======
+3
+[J@5b7b0998
+=============
+=====HashSet<long[]>======
+
+1, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:2
+
+	color:1
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	3
+color:	1
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	1
+distance:	1
+starter:	1
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	1
+color:	1
+distance:	1
+starter:	2
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	2
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	2
+color:	1
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	2
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@6b86f247
+=============
+=====start key======
+3
+[J@688c4a77
+=============
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	2
+=====start key======
+2
+[J@526d0040
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:1
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	2
+=====start key======
+3
+[J@722b9406
+=============
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+=====start key======
+0
+[J@b035079
+=============
+=====start key======
+1
+[J@6983d95
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:1
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	2
+=====start key======
+0
+[J@74f30494
+=============
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+=====start key======
+1
+[J@7eb1cc87
+=============
+=====start key======
+2
+[J@4aeaf40c
+=============
+=====HashSet<long[]>======
+
+1, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:1
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	2
+=====start key======
+1
+[J@73c6641
+=============
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+2
+[J@e5d391d
+=============
+=====start key======
+3
+[J@a50a649
+=============
+=====HashSet<long[]>======
+
+1, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:1
+
+	color:1
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	2
+color:	1
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	3
+color:	1
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	1
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	1
+color:	1
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	3
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@565c7f6
+=============
+=====start key======
+2
+[J@5d2aea3e
+=============
+=====start key======
+3
+[J@2c78bc3b
+=============
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	3
+=====start key======
+1
+[J@2a8ddc4c
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:1
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	3
+=====start key======
+2
+[J@477a1767
+=============
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@20968fda
+=============
+=====start key======
+1
+[J@7cbe41ec
+=============
+=====start key======
+3
+[J@2eda2cef
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:1
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	3
+=====start key======
+3
+[J@75bc16f0
+=============
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+=====start key======
+0
+[J@f8622f3
+=============
+=====start key======
+1
+[J@2f60877b
+=============
+=====start key======
+2
+[J@6a5eb489
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+1, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:1
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	3
+=====start key======
+0
+[J@2092dcdb
+=============
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+1
+[J@9e1be92
+=============
+=====start key======
+2
+[J@43a6684f
+=============
+=====start key======
+3
+[J@620a3d3b
+=============
+=====HashSet<long[]>======
+
+1, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:1
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	1
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	1
+
+=========vnode==========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	4
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	1
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	2
+
+=========vnode==========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	4
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	1
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	3
+
+=========vnode==========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	4
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	1
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+======v==========
+the v is:	0
+
+=========vnode==========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	4
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@48082751
+=============
+=====start key======
+1
+[J@f4d5bc9
+=============
+=====start key======
+2
+[J@1fc4f0f8
+=============
+=====start key======
+3
+[J@3aa83a13
+=============
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	
+the map is:	
+starter:	0
+color:	1
+distance:	4
+=====start key======
+0
+[J@7a7cd37a
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+1, 
+4, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	1
+the edges is:	
+the map is:	
+starter:	1
+color:	1
+distance:	4
+=====start key======
+1
+[J@19202d69
+=============
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@f855562
+=============
+=====start key======
+1
+[J@7aa89ce3
+=============
+=====start key======
+2
+[J@53d439fe
+=============
+=====start key======
+3
+[J@122b7db1
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+1, 
+4, 
+
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	2
+the edges is:	
+the map is:	
+starter:	2
+color:	1
+distance:	4
+=====start key======
+2
+[J@6548f8c8
+=============
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@19c5466b
+=============
+=====start key======
+1
+[J@66922804
+=============
+=====start key======
+2
+[J@5815338
+=============
+=====start key======
+3
+[J@6d7e845a
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+1, 
+4, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	3
+the edges is:	
+the map is:	
+starter:	3
+color:	1
+distance:	4
+=====start key======
+3
+[J@d2368df
+=============
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@fba0f36
+=============
+=====start key======
+1
+[J@3caa4b
+=============
+=====start key======
+2
+[J@ed0220c
+=============
+=====start key======
+3
+[J@26b496d
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+1, 
+4, 
+
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@69fe571f
+=============
+=====start key======
+1
+[J@3909ea96
+=============
+=====start key======
+2
+[J@3a083b1b
+=============
+=====start key======
+3
+[J@72608760
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@1f57ea4a
+=============
+=====start key======
+1
+[J@44d6b059
+=============
+=====start key======
+2
+[J@6ad3c65d
+=============
+=====start key======
+3
+[J@75843a75
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@3c1a1399
+=============
+=====start key======
+1
+[J@53fcc0a2
+=============
+=====start key======
+2
+[J@76caf6c1
+=============
+=====start key======
+3
+[J@70e35d5
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@35f03691
+=============
+=====start key======
+1
+[J@2d8e8541
+=============
+=====start key======
+2
+[J@67ce85c4
+=============
+=====start key======
+3
+[J@27b03c1a
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@9ac5f13
+=============
+=====start key======
+1
+[J@1395dd5b
+=============
+=====start key======
+2
+[J@53f78b68
+=============
+=====start key======
+3
+[J@20e183e9
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@359b46dc
+=============
+=====start key======
+1
+[J@65493102
+=============
+=====start key======
+2
+[J@2830ae41
+=============
+=====start key======
+3
+[J@14004204
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@1cee1ede
+=============
+=====start key======
+1
+[J@552c8fa8
+=============
+=====start key======
+2
+[J@608b8a47
+=============
+=====start key======
+3
+[J@69236cd5
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@14be49e0
+=============
+=====start key======
+1
+[J@58e41bc3
+=============
+=====start key======
+2
+[J@67dacccc
+=============
+=====start key======
+3
+[J@4dbb9a58
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@6446d228
+=============
+=====start key======
+1
+[J@658f7386
+=============
+=====start key======
+2
+[J@2ce99681
+=============
+=====start key======
+3
+[J@1b980630
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@19be4777
+=============
+=====start key======
+1
+[J@1b45e2d5
+=============
+=====start key======
+2
+[J@92f1bf0
+=============
+=====start key======
+3
+[J@73d32e45
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@2d82ef6b
+=============
+=====start key======
+1
+[J@6f347124
+=============
+=====start key======
+2
+[J@5bf02b85
+=============
+=====start key======
+3
+[J@74b957ea
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@343aff84
+=============
+=====start key======
+1
+[J@d5d4de6
+=============
+=====start key======
+2
+[J@68a53de4
+=============
+=====start key======
+3
+[J@38827968
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@344977e2
+=============
+=====start key======
+1
+[J@435db13f
+=============
+=====start key======
+2
+[J@3c1fc1a6
+=============
+=====start key======
+3
+[J@48e29820
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@14718242
+=============
+=====start key======
+1
+[J@281ec58a
+=============
+=====start key======
+2
+[J@7c3afb99
+=============
+=====start key======
+3
+[J@45c3987
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@42c4d04d
+=============
+=====start key======
+1
+[J@747917a
+=============
+=====start key======
+2
+[J@6b9fe451
+=============
+=====start key======
+3
+[J@4e46b90a
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@51e67ac
+=============
+=====start key======
+1
+[J@f284fd4
+=============
+=====start key======
+2
+[J@1f90ef12
+=============
+=====start key======
+3
+[J@643f96ee
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@5bab2b55
+=============
+=====start key======
+1
+[J@42aa0877
+=============
+=====start key======
+2
+[J@2911ded2
+=============
+=====start key======
+3
+[J@543bc20e
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@1f415056
+=============
+=====start key======
+1
+[J@79014e21
+=============
+=====start key======
+2
+[J@44b09697
+=============
+=====start key======
+3
+[J@256eb6bc
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@79f03d7
+=============
+=====start key======
+1
+[J@58b51c29
+=============
+=====start key======
+2
+[J@5a4bf53e
+=============
+=====start key======
+3
+[J@30d1e7c2
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@24c68a98
+=============
+=====start key======
+1
+[J@66b51404
+=============
+=====start key======
+2
+[J@7a354749
+=============
+=====start key======
+3
+[J@3fdb484d
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@6e8f94
+=============
+=====start key======
+1
+[J@5a943dc4
+=============
+=====start key======
+2
+[J@3a633d51
+=============
+=====start key======
+3
+[J@494eaec9
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@4cb533b8
+=============
+=====start key======
+1
+[J@c569c60
+=============
+=====start key======
+2
+[J@a3468f4
+=============
+=====start key======
+3
+[J@76d67067
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@786db724
+=============
+=====start key======
+1
+[J@6b12da40
+=============
+=====start key======
+2
+[J@22b6d6ab
+=============
+=====start key======
+3
+[J@11c7865b
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@4245c97b
+=============
+=====start key======
+1
+[J@73aecc3a
+=============
+=====start key======
+2
+[J@58e22f2b
+=============
+=====start key======
+3
+[J@6986dda3
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@3cecb67f
+=============
+=====start key======
+1
+[J@58c16b18
+=============
+=====start key======
+2
+[J@25e222e
+=============
+=====start key======
+3
+[J@7215fb38
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@120540c
+=============
+=====start key======
+1
+[J@716de067
+=============
+=====start key======
+2
+[J@64a7c45e
+=============
+=====start key======
+3
+[J@424d2af2
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@583e97df
+=============
+=====start key======
+1
+[J@7564debb
+=============
+=====start key======
+2
+[J@315b0333
+=============
+=====start key======
+3
+[J@4e2f2295
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@78878c4c
+=============
+=====start key======
+1
+[J@b0c0f66
+=============
+=====start key======
+2
+[J@44c6f734
+=============
+=====start key======
+3
+[J@628f9a32
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@2e8aeed0
+=============
+=====start key======
+1
+[J@72e5355f
+=============
+=====start key======
+2
+[J@26132ae7
+=============
+=====start key======
+3
+[J@3465b738
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@1dfd868
+=============
+=====start key======
+1
+[J@ef894ce
+=============
+=====start key======
+2
+[J@61f1680f
+=============
+=====start key======
+3
+[J@2fe6e305
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@5f4275d4
+=============
+=====start key======
+1
+[J@445e228
+=============
+=====start key======
+2
+[J@802b249
+=============
+=====start key======
+3
+[J@6906daba
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@41021f34
+=============
+=====start key======
+1
+[J@724eb043
+=============
+=====start key======
+2
+[J@c163956
+=============
+=====start key======
+3
+[J@70e434d
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@4c2b349d
+=============
+=====start key======
+1
+[J@288b567c
+=============
+=====start key======
+2
+[J@53dafbaf
+=============
+=====start key======
+3
+[J@4dc1c92b
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@6d7e4dee
+=============
+=====start key======
+1
+[J@7f2e7c6a
+=============
+=====start key======
+2
+[J@44ea5461
+=============
+=====start key======
+3
+[J@7449cf9f
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@19de0b5e
+=============
+=====start key======
+1
+[J@40bc5596
+=============
+=====start key======
+2
+[J@c970c0e
+=============
+=====start key======
+3
+[J@10987197
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@8497904
+=============
+=====start key======
+1
+[J@fa7f9dc
+=============
+=====start key======
+2
+[J@5d04e28b
+=============
+=====start key======
+3
+[J@6bb54362
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@2a62610b
+=============
+=====start key======
+1
+[J@20d12eea
+=============
+=====start key======
+2
+[J@55f157b
+=============
+=====start key======
+3
+[J@257b40fe
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@3ee7f6eb
+=============
+=====start key======
+1
+[J@6f03de90
+=============
+=====start key======
+2
+[J@6708f8e0
+=============
+=====start key======
+3
+[J@7e0b6ef8
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@20a29c6e
+=============
+=====start key======
+1
+[J@13cc0a7f
+=============
+=====start key======
+2
+[J@38c52200
+=============
+=====start key======
+3
+[J@163b4b1e
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@ec0a9f9
+=============
+=====start key======
+1
+[J@ad72200
+=============
+=====start key======
+2
+[J@31f9338f
+=============
+=====start key======
+3
+[J@5fa80aea
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@126d2380
+=============
+=====start key======
+1
+[J@3b35b1f3
+=============
+=====start key======
+2
+[J@4235e6e3
+=============
+=====start key======
+3
+[J@60c9630a
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@4585572a
+=============
+=====start key======
+1
+[J@351daa0e
+=============
+=====start key======
+2
+[J@2e879860
+=============
+=====start key======
+3
+[J@4824de7d
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@6c8b058b
+=============
+=====start key======
+1
+[J@1b192059
+=============
+=====start key======
+2
+[J@e9ac0f5
+=============
+=====start key======
+3
+[J@51f21c50
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@6e20f237
+=============
+=====start key======
+1
+[J@34fe315d
+=============
+=====start key======
+2
+[J@1c5aebd9
+=============
+=====start key======
+3
+[J@1532021a
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@31e46a68
+=============
+=====start key======
+1
+[J@b05eb6f
+=============
+=====start key======
+2
+[J@31a3ca10
+=============
+=====start key======
+3
+[J@7826f9e5
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@46e06703
+=============
+=====start key======
+1
+[J@368b1a4f
+=============
+=====start key======
+2
+[J@666c5482
+=============
+=====start key======
+3
+[J@52205756
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@4945f939
+=============
+=====start key======
+1
+[J@10ed32c4
+=============
+=====start key======
+2
+[J@449fea8a
+=============
+=====start key======
+3
+[J@5edf2d38
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@e11e831
+=============
+=====start key======
+1
+[J@39a2f02e
+=============
+=====start key======
+2
+[J@78467991
+=============
+=====start key======
+3
+[J@5ad75c47
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@33f98d58
+=============
+=====start key======
+1
+[J@44aea710
+=============
+=====start key======
+2
+[J@265a2eaa
+=============
+=====start key======
+3
+[J@6aadae91
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@309fe84e
+=============
+=====start key======
+1
+[J@524c71d2
+=============
+=====start key======
+2
+[J@18c4bc34
+=============
+=====start key======
+3
+[J@1c2006a0
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@7a9300cc
+=============
+=====start key======
+1
+[J@49198ff2
+=============
+=====start key======
+2
+[J@2d397e5c
+=============
+=====start key======
+3
+[J@1996e136
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@9bad5a
+=============
+=====start key======
+1
+[J@6c91f005
+=============
+=====start key======
+2
+[J@61250ff2
+=============
+=====start key======
+3
+[J@483a0ab1
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@3e68cd79
+=============
+=====start key======
+1
+[J@5289e2f1
+=============
+=====start key======
+2
+[J@5a92668c
+=============
+=====start key======
+3
+[J@418a9fc8
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@74002515
+=============
+=====start key======
+1
+[J@3582c132
+=============
+=====start key======
+2
+[J@1b59d510
+=============
+=====start key======
+3
+[J@26b31b77
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@38d0357a
+=============
+=====start key======
+1
+[J@6d66f9b9
+=============
+=====start key======
+2
+[J@39518cc
+=============
+=====start key======
+3
+[J@318efaea
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@21fb3211
+=============
+=====start key======
+1
+[J@72940b84
+=============
+=====start key======
+2
+[J@558041e0
+=============
+=====start key======
+3
+[J@576504fa
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@584a5c78
+=============
+=====start key======
+1
+[J@79fcf790
+=============
+=====start key======
+2
+[J@4ee14d81
+=============
+=====start key======
+3
+[J@29a7789c
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@31df5f21
+=============
+=====start key======
+1
+[J@3fde891b
+=============
+=====start key======
+2
+[J@2afb6c5f
+=============
+=====start key======
+3
+[J@6087e704
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@7a4fe91e
+=============
+=====start key======
+1
+[J@1451ef4e
+=============
+=====start key======
+2
+[J@f35f44e
+=============
+=====start key======
+3
+[J@1f3a34af
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@2658dd2d
+=============
+=====start key======
+1
+[J@1420c906
+=============
+=====start key======
+2
+[J@746db33c
+=============
+=====start key======
+3
+[J@4e1263db
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
+========search map beginning============:
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+========search map beginning============:
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+=============In Reduce===========
+the node id is: 	0
+the node isStart is:	false
+the node starter is:	0
+the edges is:	1, 
+the map is:	
+starter:	0
+color:	2
+distance:	0
+starter:	1
+color:	2
+distance:	3
+starter:	2
+color:	2
+distance:	2
+starter:	3
+color:	2
+distance:	1
+=====start key======
+0
+[J@10cb42cf
+=============
+=====start key======
+1
+[J@108f2ca6
+=============
+=====start key======
+2
+[J@27bc4ec8
+=============
+=====start key======
+3
+[J@3bd840d9
+=============
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+============Reduce result=======
+the node 0:
+
+edges:	
+1, 
+
+
+	starter:0
+
+	color:2
+
+	distance:0
+
+	starter:1
+
+	color:2
+
+	distance:3
+
+	starter:2
+
+	color:2
+
+	distance:2
+
+	starter:3
+
+	color:2
+
+	distance:1
+
+=============In Reduce===========
+the node id is: 	1
+the node isStart is:	false
+the node starter is:	0
+the edges is:	2, 
+the map is:	
+starter:	0
+color:	2
+distance:	1
+starter:	1
+color:	2
+distance:	0
+starter:	2
+color:	2
+distance:	3
+starter:	3
+color:	2
+distance:	2
+=====start key======
+0
+[J@72898540
+=============
+=====start key======
+1
+[J@228b677f
+=============
+=====start key======
+2
+[J@6e37d490
+=============
+=====start key======
+3
+[J@13647278
+=============
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+============Reduce result=======
+the node 1:
+
+edges:	
+2, 
+
+
+	starter:0
+
+	color:2
+
+	distance:1
+
+	starter:1
+
+	color:2
+
+	distance:0
+
+	starter:2
+
+	color:2
+
+	distance:3
+
+	starter:3
+
+	color:2
+
+	distance:2
+
+=============In Reduce===========
+the node id is: 	2
+the node isStart is:	false
+the node starter is:	0
+the edges is:	3, 
+the map is:	
+starter:	0
+color:	2
+distance:	2
+starter:	1
+color:	2
+distance:	1
+starter:	2
+color:	2
+distance:	0
+starter:	3
+color:	2
+distance:	3
+=====start key======
+0
+[J@27972e3a
+=============
+=====start key======
+1
+[J@365bf624
+=============
+=====start key======
+2
+[J@4f7cd15d
+=============
+=====start key======
+3
+[J@b955970
+=============
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+============Reduce result=======
+the node 2:
+
+edges:	
+3, 
+
+
+	starter:0
+
+	color:2
+
+	distance:2
+
+	starter:1
+
+	color:2
+
+	distance:1
+
+	starter:2
+
+	color:2
+
+	distance:0
+
+	starter:3
+
+	color:2
+
+	distance:3
+
+=============In Reduce===========
+the node id is: 	3
+the node isStart is:	false
+the node starter is:	0
+the edges is:	0, 
+the map is:	
+starter:	0
+color:	2
+distance:	3
+starter:	1
+color:	2
+distance:	2
+starter:	2
+color:	2
+distance:	1
+starter:	3
+color:	2
+distance:	0
+=====start key======
+0
+[J@7a22ce00
+=============
+=====start key======
+1
+[J@302a0a5
+=============
+=====start key======
+2
+[J@2180b22e
+=============
+=====start key======
+3
+[J@831fb31
+=============
+=====HashSet<long[]>======
+
+2, 
+3, 
+
+
+=====HashSet<long[]>======
+
+2, 
+2, 
+
+
+=====HashSet<long[]>======
+
+2, 
+1, 
+
+
+=====HashSet<long[]>======
+
+2, 
+0, 
+
+
+============Reduce result=======
+the node 3:
+
+edges:	
+0, 
+
+
+	starter:0
+
+	color:2
+
+	distance:3
+
+	starter:1
+
+	color:2
+
+	distance:2
+
+	starter:2
+
+	color:2
+
+	distance:1
+
+	starter:3
+
+	color:2
+
+	distance:0
+
